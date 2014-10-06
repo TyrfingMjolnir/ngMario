@@ -13,26 +13,24 @@ angular.module( 'ng_mario', [
   'ng_mario.globals',
   'mario',
   'reveal'
-])
+] )
 
 .config( function myAppConfig ( routeProvider ) {
   routeProvider
-    .otherwise({ path: '/home' });
-})
+    .otherwise( { path: '/home' } );
+} )
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, globals ) {
   $scope.globals = globals;
   $scope._ = window._;
 
-  function preloadImg(src) {
-    $('<img/>')[0].src = src;
+  function preloadImg( src ) {
+    $( '<img/>' )[0].src = src;
   }
-  preloadImg('assets/images/super_mario.png');
-  preloadImg('assets/images/feelings_about_angularjs_over_time.png');
-  preloadImg('assets/images/meme.jpg');
-  preloadImg('assets/images/karol.png');
-  preloadImg('assets/images/goomba.png');
-  preloadImg('assets/images/star.png');
-})
-
-;
+  preloadImg( 'assets/images/super_mario.png' );
+  preloadImg( 'assets/images/feelings_about_angularjs_over_time.png' );
+  preloadImg( 'assets/images/meme.jpg' );
+  preloadImg( 'assets/images/karol.png' );
+  preloadImg( 'assets/images/goomba.png' );
+  preloadImg( 'assets/images/star.png' );
+} );
